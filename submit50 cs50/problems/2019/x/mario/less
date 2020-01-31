@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main()
+{
+    int r;
+    printf("Enter a number: ");
+    scanf("%d", &r);
+    
+    while(r<0 || r>9)
+    {
+        printf("Error! Enter a number between 1 to 8: ");
+        scanf("%d", &r);        
+    }
+
+    for(int i=r; i>=1; i--)
+    {
+        for(int j=1; j<=i; j++)
+        {
+            printf(" ");
+        }
+        for(int k=r; k>=i; k--)
+        {
+            printf("#");
+        }
+        printf("\n");
+    }
+}
